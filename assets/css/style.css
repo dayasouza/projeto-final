@@ -4,7 +4,10 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family: "Comfortaa" , sans-serif;
+    color: #f4f4f4
 }
+
 .header {
     width: 100%;
     max-width: 900px;
@@ -34,8 +37,9 @@ body {
     width: 24px;
 }
 
-.icon--texto {
+.icon--text {
     margin: 0 8px;
+    animation: pulsate 1s infinite alternate;
 }
 
 .main {
@@ -46,7 +50,7 @@ body {
     margin: 0 auto;
 }
 
-.perfil {
+.profile {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -54,13 +58,14 @@ body {
 
 }
 
-.perfil__foto{
+.profile__picture{
     width: 100%;
     max-width: 200px;
     border-radius: 50%;
+    border: 6px solid #800080;
 }
 
-.perfil__nome {
+.profile__name {
     font-family: "Great Vibes", sans-serif;
     font-size: 52px;
     font-weight: 400px;
@@ -68,34 +73,35 @@ body {
     margin: 16px 0;
 }
 
-.perfil__description {
-    font-family: "Comfortaa" , sans-serif;
+.profile__description {
     font-size: 16px;
     font-weight: 400;
-    color: #f4f4f4;
     margin: 0;
     width: 100%;
-    max-width: 350px;
+    max-width: 550px;
     text-align: center;
+}
+
+.p {
+    
 }
 
 .section {
     padding: 8px;
     width: 100%;
-    max-width: 350px;
+    max-width: 550px;
     margin: 24px auto;
     box-sizing: border-box;
 }
 
-.section__titulo {
-    font-family: "Comfortaa", sans-serif;
+.section__title {
     font-size: 22px;
     font-weight: 400;
     color: #d098c5;
     margin: 16px 0;
 }
 
-.curso {
+.course {
     background-color: #795a77;
     padding: 8px;
     margin: 16px 0;
@@ -103,19 +109,16 @@ body {
     border-radius: 3px;
 }
 
-.curso__titulo{
-    font-family: "Comfortaa", sans-serif;
+.course__title {
     font-size: 18px;
     font-weight: 400;
     color: #ffedff;
     margin: 8px 0;
 }
 
-.curso__description {
-    font-family: "Comfortaa", sans-serif;
+.course__description {
     font-size: 16px;
     font-weight: 400;
-    color: #f4f4f4;
     margin: 8px 0;
 }
 
@@ -130,11 +133,20 @@ body {
     flex-shrink: 0;
 }
 
-.footer__texto {
-    font-family: "Comfortaa", sans-serif;
+.footer__text {
     font-size: 14px;
     font-weight: 700;
     color: #ffedff;
     display: flex;
     align-items: center;
+}
+
+@keyframes pulsate {
+    0% {
+        transform: scale(.8);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
 }
